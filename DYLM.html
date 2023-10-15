@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Do You Love Me ?</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript">
+        flag = 1
+        function yes () {
+            alert("YES. You are Right !!!")
+        }
+        function love () {
+            if (flag == 1) {
+                ans_no.style.top = 90;
+                ans_no.style.left = 50;
+                flag = 2;
+            }else if (flag == 2) {
+                ans_no.style.top = 45;
+                ans_no.style.left = 50;
+                flag = 3;
+            }else if (flag == 3) {
+                ans_no.style.top =250;
+                ans_no.style.left = 160;
+                flag = 1;
+            }
+        }
+    </script>
+<style>
+    body{
+        background-color: bisque;
+    }
+    #ques{
+        position: absolute;
+        padding-left: 40%;
+        padding-top: 170px;
+        color: rgb(254, 6, 180);
+    }
+    #ans_yes {
+        position: absolute;
+        padding-left: 44%;
+        padding-top: 250px;
+
+    }
+    #ans_no {
+        position: absolute;
+        text-align: center;
+        padding-left: 50%;
+        padding-top: 250px;
+    }
+</style>
+</head>
+<body>
+    <form action="http://Do_You_Love_Me"></form>
+    <h1 id="ques"> 🧡 Do you love me  ? 🧡</h1>
+    <div id="ans_yes">
+        <input type="button" value="YES" onclick="yes()"/>
+    </div>
+    <div id="ans_no">
+        <input type="button" value="NO" onmouseover="love()"/>
+    </div>
+</body>
+</html>
